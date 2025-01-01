@@ -1,0 +1,66 @@
+body {
+    background-image: url("/atelier2_formulaire/profil.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+}
+
+.rouge {
+    color: red;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+.bordee {
+    border: solid;
+}
+
+.cachee {
+    display: none;
+}
+
+.masquee {
+    visibility: hidden;
+}
+
+#un_paragraphe {
+    text-decoration: underline;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    line-height: 30px;
+}
+
+b { 
+    display: inline-block;
+    color: red;
+    width: 50px;
+}
+
+p {
+    transition: all .8s;
+}
+
+p:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+p:first-child {
+    background-color: green;
+}
+
+p:last-child{
+    background-color: blue;
+}
+
+div p {
+    font-style: italic;
+}
+
+body > p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

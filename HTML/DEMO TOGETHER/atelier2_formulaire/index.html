@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="/atelier2_formulaire/logo.webp" alt="Logo du site My Music" width="50px">My music</div>
+        <div class="utilisateur">
+            <div>
+                <img src="/atelier2_formulaire/profil.png" alt="Photo de profil de l'utilisateur" width="100">
+            </div>
+                <div><p>Clara Laviale, connectée </p>
+                <a href="#">Mon compte</a> | <a href="#">Déconnexion</a>
+            </div>
+        </div>
+    </header>
+    <div class="page">
+        <h1>Mon compte</h1>
+        <form action="" method="GET">
+            <p>Vos informations personnelles</p>
+            <div>
+                <label for="nom">Nom:</label><br>
+                <input type="text" name="nom" id="nom" placeholder="Votre nom ?" maxlength="10">
+            </div>
+            <div>
+                <label for="datenaissance">Date de naissance :</label><br>
+                <input type="date" name="datenaissance" id="datenaissance">
+            </div>
+            <div>
+                <label for="prenom">Prénom:</label><br>
+                <input type="text" name="prenom" id="prenom" placeholder="Votre prénom ?" maxlength="10">
+            </div>
+            <div>
+                <label for="favori">Groupe préféré :</label><br>
+                <select name="favori" id="favori" size="1">
+                    <option value="theblackkeys">The Black Keys</option>
+                    <option value="gorillaz">Gorillaz</option>
+                    <option value="altj">Alt-J</option>
+                    <option value="thexx">The XX</option>
+                </select>
+            </div>
+            <div>
+                <label for="mail">Email : </label><br>
+                <input type="email" name="mail" id="mail" placeholder="Votre email ?">
+            </div>
+            <div>
+                <label for="telephone">Email : </label><br>
+                <input type="tel" name="telephone" id="telephone" placeholder="Votre téléphone ?">
+            </div>
+            <div>
+                <label for="pwd">Mot de passe : </label><br>
+                <input type="password" name="pwd" id="pwd">
+            </div>
+            <div>
+                <label for="repwd">Répéter le mot de passe : </label><br>
+                <input type="password" name="repwd" id="repwd">
+            </div>
+            <div>
+                <p>Votre formule d'abonnement</p>
+                <table border="0">
+                    <tr>
+                        <th></th>
+                        <th>
+                            <input type="radio" name="formule" value="premium+">
+                            <label for="premium+">Premium+</label>
+                        </th>
+                        <th>
+                            <input type="radio" name="formule" value="premium">
+                            <label for="premium">Premium</label>
+                        </th>
+                        <th>
+                            <input type="radio" name="formule" value="discovery">
+                            <label for="discovery">Discovery</label>
+                        </th></tr>
+                    <tr>
+                        <td>Accès web</td>
+                        <td><img src="/atelier2_formulaire/verifier.png" alt="">&#x274C;</td>
+                        <td><img src="/atelier2_formulaire/verifier.png" alt="">&#x274E;</td>
+                        <td><img src="/atelier2_formulaire/verifier.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Accès mobile</td>
+                        <td><img src="/atelier2_formulaire/verifier.png" alt=""></td>
+                        <td><img src="/atelier2_formulaire/verifier.png" alt=""></td>
+                        <td><img src="/atelier2_formulaire/croix.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Ecoute illimitée</td>
+                        <td><img src="/atelier2_formulaire/verifier.png" alt=""></td>
+                        <td><img src="/atelier2_formulaire/croix.png" alt=""></td>
+                        <td><img src="/atelier2_formulaire/croix.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Tarifs</td>
+                        <td>11,99€/mois</td>
+                        <td>5,99€/mois</td>
+                        <td>Gratuit 1 mois</td>
+                    </tr>
+                </table>
+                <div>
+                    <input type="checkbox" name="newsletters" id="newsletters">
+                    <label for="newsletters">Recevoir nos newsletters</label>
+                    <input type="checkbox" name="partenaires" id="partenaires">
+                    <label for="partenaires">Recevoir les newsletters de nos partenaires</label>
+                </div>
+            </div>
+
+            <div>
+                <input type="reset" value="Annuler">
+                <input type="submit" value="Valider">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

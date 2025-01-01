@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="GET">
+        <div>
+            <label for="nom">Votre nom * :</label>
+            <input type="text" name="nom" id="nom" placeholder="Votre nom ?" maxlength="10" autofocus="autofocus" required="required" >
+        </div>
+
+        <div>
+            <label for="pwd">Mot de passe : </label>
+            <input type="password" name="pwd" id="pwd">
+        </div>
+
+        <div>
+            <label for="comm">Un commentaire ?</label>
+            <br>
+            <textarea name="comm" id="comm" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+            <label for="favori">Votre sport préféré ?</label>
+            <select name="favori" id="favori" size="1">
+                <optgroup label="Athlétisme">
+                    <option value="marathon">Marathon</option>
+                    <option value="100m">100 mètres</option>
+                    <option value="relais">Relais</option>
+                    <option value="sautdehaie">Saut de haie</option>
+                </optgroup>
+                <optgroup label="Arts martiaux">
+                    <option value="judo">Judo</option>
+                    <option value="karate">Karaté</option>
+                    <option value="kendo">Kendo</option>
+                    <option value="jujitsu">Jujitsu</option>
+                </optgroup>
+                <option value="escrime">Escrime</option>
+                <option value="natation">Natation synchronisée</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Votre pizza avec ?</p>
+            <input type="checkbox" name="topping1"  id="topping1" checked="checked">
+            <label for="topping1">Mozzarella</label>
+            <br>
+            <input type="checkbox" name="topping2"  id="topping2">
+            <label for="topping2">Jambon</label>
+            <br>
+            <input type="checkbox" name="topping3"  id="topping3">
+            <label for="topping3">Champignon</label>
+            <br>
+            <input type="checkbox" name="topping4"  id="topping4">
+            <label for="topping4">Poivron</label>
+            <br>
+        </div>
+
+        <fieldset>
+            <legend>Votre moyen de paiement ?</legend>
+            <input type="radio" name="mode" id="cb" value="cb">
+            <label for="cb">Carte bancaire</label>
+            <br>
+            <input type="radio" name="mode" id="cheque" value="cheque">
+            <label for="cheque">Chèque</label>
+            <br>
+            <input type="radio" name="mode" id="espece" value="espece">
+            <label for="espece">Espèces</label>
+            <br>
+        </fieldset>
+
+        <div>
+            <input type="text" placeholder="Text"><br>
+            <input type="email" placeholder="Email"><br>
+            <input type="url" placeholder="Url"><br>
+            <input type="date"><br>
+            <input type="month"><br>
+            <input type="week"><br>
+            <input type="time" min="11:00" max="23:00" step="900"><br>
+            <input type="datetime"><br>
+            <input type="color"><br>
+            <input type="range" min="1" max="5" value="3" step="1"><br>
+            <input type="number" placeholder="Nb" min="1" max="5" value="3" step="1"><br>
+        </div>
+
+        <input type="submit" value="Enregistrer">
+        <input type="reset" value="Réinitialiser le formulaire">
+
+    </form>
+</body>
+</html>

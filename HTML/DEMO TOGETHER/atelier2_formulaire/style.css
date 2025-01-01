@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(222, 195, 248);
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+header {
+  overflow: hidden;
+  background-color: #b991e4;
+  padding: 10px 10px;
+  border-bottom: 1px black solid ;
+}
+header div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo {
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+.logo img {
+    vertical-align: middle;
+    width: 35px;
+    margin-right: 10px;
+}
+.utilisateur {
+    float: right;
+}
+.utilisateur img {
+    margin-right: 10px;
+}
+.page {
+    margin: auto;
+    width: 90%;
+}
+form {
+    border: 1px solid;
+}
+
+form div {
+    display: inline-block;
+    width: 49%;
+}
