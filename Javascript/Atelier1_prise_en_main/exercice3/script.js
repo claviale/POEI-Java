@@ -15,7 +15,7 @@ let container = document.getElementById("list");
 
 content.forEach(country => {
     let tr_elem = document.createElement("tr");
-    let td_elem = document.createElement("tr");
+    let td_elem = document.createElement("td");
     td_elem.innerHTML = country;
     tr_elem.appendChild(td_elem);
     container.appendChild(tr_elem);
