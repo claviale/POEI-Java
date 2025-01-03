@@ -1,4 +1,5 @@
 #movingbutton {
+    margin: auto;
     display: block;
     position: absolute;
 }

@@ -1,0 +1,11 @@
+input {
+    display: block;
+    margin: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 12px 2px 34px -5px #000000;
+}
+
+input:focus {
+    box-shadow: 5px 5px 15px 5px #000000;
+}
