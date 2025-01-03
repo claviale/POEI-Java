@@ -15,3 +15,18 @@ function movePosition() {
     
     //Le button dépasse parfois du screen
 }
+
+//Correction
+
+let minX = movingbutton.offsetWidth / 2;
+let maxX = window.innerWidth - minX;
+let minY = movingbutton.offsetHeight / 2;
+let maxY = window.innerHeight - minY;
+
+movingbutton.addEventListener("mouseenter", moveBtn);
+
+function moveBtn() {
+    movingbutton.style.top = Math.random() * (maxY - minY) + minY + "px";
+    movingbutton.style.left = Math.random() * (maxX - minX) + minX + "px";
+
+}

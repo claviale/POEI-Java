@@ -3,9 +3,11 @@ input {
     margin: 15px;
     border: 1px solid black;
     border-radius: 4px;
+    -webkit-box-shadow : 12px 2px 34px -5px #000000;
     box-shadow: 12px 2px 34px -5px #000000;
 }
 
 input:focus {
+    -webkit-box-shadow : 5px 5px 15px 5px #000000;
     box-shadow: 5px 5px 15px 5px #000000;
 }

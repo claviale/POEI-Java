@@ -16,6 +16,19 @@ function somme() {
     } else {
         total_elem.innerHTML = parseInt(number1_elem.value) + parseInt(number2_elem.value);
     }
-
 }
 
+// Correction
+
+number1.addEventListener("input", updateResult);
+number2.addEventListener("input", updateResult);
+
+function updateResult() {
+    let sum = parseInt(number1.value) + parseInt(number2.value);
+    if (isNaN(sum)) {
+        total.innerHTML = 0;
+    }
+    else {
+        total.innerHTML = sum;
+    }
+}

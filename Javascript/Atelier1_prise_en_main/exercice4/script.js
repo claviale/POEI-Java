@@ -15,3 +15,15 @@ function getRandomColor() {
     }
     return color;
 }
+
+// Correction en rgb
+
+change.addEventListener("click", color);
+
+function color() {
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+
+    box.style.backgroundColor = `rgb (${r}, ${g}, ${b})`;
+}
