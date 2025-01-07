@@ -1,0 +1,32 @@
+table {
+    text-align: center;
+    margin: 0;
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+
+thead {
+    color: white;
+    background-color: #000000;
+}
+
+
+td, th {
+    text-transform: capitalize;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+tbody > tr {
+    background-color: rgb(206, 206, 206);
+}
+
+tbody > tr:nth-child(odd) {
+    background-color: rgb(146, 143, 143);
+}
+
+.sorter {
+    display: inline;
+    cursor: pointer;
+}

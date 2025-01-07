@@ -1,0 +1,12 @@
+#box {
+    margin: 0;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+
+}
+
+#change {
+    margin: 0;
+}

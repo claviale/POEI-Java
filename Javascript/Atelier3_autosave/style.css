@@ -1,0 +1,21 @@
+textarea {
+    width: 600px;
+    height: 100px;
+}
+
+div {
+    width: 600px;
+}
+
+div p {
+    padding: 10px;
+    margin: 0;
+}
+
+p:nth-child(even) {
+    background-color:lightpink;
+}
+
+p:nth-child(odd) {
+    background-color: aquamarine;
+}

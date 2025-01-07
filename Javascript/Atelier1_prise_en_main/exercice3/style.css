@@ -1,0 +1,16 @@
+#list {
+    border: 1px black solid;
+    margin: 0;
+}
+
+tr {
+    display: block;
+    background-color: rgb(206, 206, 206);
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(146, 143, 143);
+}
+
