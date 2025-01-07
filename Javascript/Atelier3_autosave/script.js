@@ -10,3 +10,20 @@ function addText() {
     container_elem.appendChild(note_content_elem);
     
 }
+
+// Objectif bonus = détecter l'inactivité de l'utilisateur (si inactif pendant 3s, alors on coupe l'intervale)
+
+content_elem.addEventListener("input", cutSave);
+
+let idtimeout = 0;
+
+function cutSave() {
+
+    if(idtimeout !== 0) {
+        clearTimeout(idtimeout);
+    }
+
+    idtimeout = setTimeout(() => {
+        clearInterval(interval_text);
+    }, 3000);
+}

@@ -1,6 +1,8 @@
 table {
     text-align: center;
     margin: 0;
+    border: solid 1px black;
+    border-collapse: collapse;
 }
 
 thead {
@@ -8,16 +10,23 @@ thead {
     background-color: #000000;
 }
 
+
 td, th {
+    text-transform: capitalize;
     padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-table > tr {
+tbody > tr {
     background-color: rgb(206, 206, 206);
 }
 
-table > tr:nth-child(odd) {
+tbody > tr:nth-child(odd) {
     background-color: rgb(146, 143, 143);
+}
+
+.sorter {
+    display: inline;
+    cursor: pointer;
 }
