@@ -2,7 +2,6 @@ package visibilite.jeu;
 
 import java.util.Random;
 
-import javax.management.RuntimeErrorException;
 
 // Nom de classe : majuscule
 public class De {
