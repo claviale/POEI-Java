@@ -7,9 +7,8 @@ public class TestDe {
 		// monDe.setNbFaces(6);
 		
 		// contructeur qu'on a créé
-		De monDe = new De(6);
-		
-		De de12 = new De(12);
+		De monDe = new De();
+		De de12 = new De(3);
 		
 		System.out.println(monDe.getNbFaces());
 		System.out.println(de12.getNbFaces());
@@ -24,5 +23,7 @@ public class TestDe {
 			System.out.println(monDe.getResultat());
 			
 		} while (monDe.getResultat() != 6);
+		
+		System.out.println("Nombre de dés intanciés : " + De.getNbDesInstancies());
 	}
 }
