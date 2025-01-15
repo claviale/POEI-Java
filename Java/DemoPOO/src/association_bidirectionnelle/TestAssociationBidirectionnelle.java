@@ -18,6 +18,9 @@ public class TestAssociationBidirectionnelle {
 		matrix.ajouterEleve(loracle);
 		matrix.ajouterEleve(smith);
 		
+		//Ajouter tous les élèves au groupe
+		//matrix.ajouterEleves(neo, trinity, morpheus, loracle, smith, new Eleve("Valentin"));
+		//matrix.ajouterEleves(new Eleve("Clara")); // Créer un deuxieme tableau de 1
 		System.out.println(matrix);
 	}
 }
