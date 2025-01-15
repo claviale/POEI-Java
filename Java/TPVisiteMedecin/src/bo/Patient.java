@@ -1,5 +1,6 @@
 package bo;
 
+import java.awt.SecondaryLoop;
 import java.time.LocalDate;
 
 public class Patient {
@@ -9,12 +10,12 @@ public class Patient {
 	private String firstName;
 	private String phoneNumber;
 	private char gender;
-	private int socialSecurityNumber;
+	private long socialSecurityNumber;
 	private LocalDate birthdayDate;
 	private String comment;
 	
 	// constructeur 
-	public Patient(String lastName, String firstName, String phoneNumber, char gender, int socialSecurityNumber, LocalDate birthdayDate, String comment) {
+	public Patient(String lastName, String firstName, String phoneNumber, char gender, long socialSecurityNumber, LocalDate birthdayDate, String comment) {
 		setLastName(lastName);
 		setFirstName(firstName);
 		setPhoneNumber(phoneNumber);
@@ -24,12 +25,17 @@ public class Patient {
 		setComment(comment);
 	}
 	
+	// constructeur avec le commentaire en facultatif ("" = vide)
+	public Patient(String lastName, String firstName, String phoneNumber, char gender, long socialSecurityNumber, LocalDate birthdayDate) {
+		this(lastName, firstName, phoneNumber, gender, socialSecurityNumber, birthdayDate, "");
+	}
+	
 	// méthodes
 	public void display()
 	{
-		System.out.println(firstName + " " + lastName + " (" + gender + "), n° de sécurité sociale : " + socialSecurityNumber + ", né(e) le "+ birthdayDate + ", n° de téléphone : " + phoneNumber + ", commentaire : " + comment);
+		System.out.println(toString());
 	}
-	
+
 	// getters and setters
 	public String getLastName() {
 		return lastName;
@@ -55,10 +61,10 @@ public class Patient {
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
-	public int getSocialSecurityNumber() {
+	public long getSocialSecurityNumber() {
 		return socialSecurityNumber;
 	}
-	public void setSocialSecurityNumber(int socialSecurityNumber) {
+	public void setSocialSecurityNumber(long socialSecurityNumber) {
 		this.socialSecurityNumber = socialSecurityNumber;
 	}
 	public LocalDate getBirthdayDate() {
@@ -74,6 +80,45 @@ public class Patient {
 		this.comment = comment;
 	}
 	
+	@Override
+	public String toString() {
+		String result = "Patient [lastName=" 
+				+ lastName 
+				+ ", firstName=" 
+				+ firstName 
+				+ ", phoneNumber=" 
+				+ phoneNumber
+				+ ", gender=" 
+				+ gender 
+				+ ", socialSecurityNumber=" 
+				+ socialSecurityNumber 
+				+ ", birthdayDate="
+				+ birthdayDate 
+				+ ", comment=" ;
+		if (comment == null || comment.isBlank()) {
+			result += " RAS ";
+		} else {
+			result += comment;
+		}
+		result += "]";
+		return result;
+	}
 	
-		
+	public String toStringAvecTernaire() {
+		return "Patient [lastName=" 
+				+ lastName 
+				+ ", firstName=" 
+				+ firstName 
+				+ ", phoneNumber=" 
+				+ phoneNumber
+				+ ", gender=" 
+				+ gender 
+				+ ", socialSecurityNumber=" 
+				+ socialSecurityNumber 
+				+ ", birthdayDate="
+				+ birthdayDate 
+				+ ", comment=" 
+				+ (comment.isBlank() ? " - " : comment)  // ternaire : si blanc (pas null!) j'affiche - sinon j'affiche le commentaire
+				+ "]";
+	}
 }
