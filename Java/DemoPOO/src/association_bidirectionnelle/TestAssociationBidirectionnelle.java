@@ -18,6 +18,6 @@ public class TestAssociationBidirectionnelle {
 		matrix.ajouterEleve(loracle);
 		matrix.ajouterEleve(smith);
 		
-		System.out.println(matrix.toString());
+		System.out.println(matrix);
 	}
 }
