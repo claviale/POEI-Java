@@ -1,24 +1,34 @@
 package test;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+import bo.Adresse;
+import bo.Creneau;
 import bo.MedecinGeneraliste;
 
 public class TestMedecin {
 	
 	public static void main(String[] args) {
 		
+		Adresse ad1 = new Adresse(10, "rue", "Réformes (des)", "44100", "Nantes");
+		Creneau creneau1 = new Creneau((LocalTime.of(9, 0)), 15);
+		Creneau creneau2 = new Creneau((LocalTime.of(9, 30)), 15);
+		Creneau creneau3 = new Creneau((LocalTime.of(9, 45)), 15);
+		
 		//Création des 3 médecins
-		MedecinGeneraliste doctor1 = new MedecinGeneraliste("Watson", "John", "07.89.55.66.88");
-		MedecinGeneraliste doctor2 = new MedecinGeneraliste("Scully", "Dana", "07.89.96.10.45");
-		MedecinGeneraliste doctor3 = new MedecinGeneraliste("Dorian", "John", "07.33.25.68.74");
+		MedecinGeneraliste doctor1 = new MedecinGeneraliste("Watson", "John", "07.89.55.66.88", ad1);
+		MedecinGeneraliste doctor2 = new MedecinGeneraliste("Scully", "Dana", "07.89.96.10.45", new Adresse(15, "rue", "Camélias (des)", "44300", "Nantes"));
+		MedecinGeneraliste doctor3 = new MedecinGeneraliste("Dorian", "John", "07.33.25.68.74", new Adresse(30, "avenue", "Goblins (des)", "44000", "Nantes"));
 		
 		//Affectation du tarif initial de la consultation
 		MedecinGeneraliste.setConsultationPrice(25);
 		System.out.println("Prix de la consultation : " + MedecinGeneraliste.getConsultationPrice() + " €");
 		
 		//Affichage des 3 médecins
-		doctor1.display();
-		doctor2.display();
-		doctor3.display();
+		System.out.println(doctor1.toString());
+		System.out.println(doctor2.toString());
+		System.out.println(doctor3.toString());
 
 		//Mise à jour du numéro de téléphone d'un des médecins
 		doctor1.setPhoneNumber("06.89.55.66.90");
@@ -30,8 +40,14 @@ public class TestMedecin {
 		
 		//Nouvel affichage des 3 médecins
 		System.out.println("Mise à  jour des coordonnées des médecins :");
-		doctor1.display();
-		doctor2.display();
-		doctor3.display();
+		System.out.println(doctor1.toString());
+		System.out.println(doctor2.toString());
+		System.out.println(doctor3.toString());
+		
+		//Ajouter créneau a un docteur
+		doctor1.ajouterCreneaux(creneau1, creneau2, creneau3);
+		
+		System.out.println(doctor1.toString());
+		
 	}
 }
