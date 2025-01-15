@@ -1,27 +1,46 @@
 package bo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MedecinGeneraliste {
 	
 	// attributs
 	private String lastName;
 	private String firstName;
 	private String phoneNumber;
+	private Adresse adress;
+	private List<Creneau> creneaux = new ArrayList<Creneau>();
 	
 	private static int consultationPrice;
 	
 	// constructeur 
-	public MedecinGeneraliste(String lastName, String firstName, String phoneNumber) {
+	public MedecinGeneraliste(String lastName, String firstName, String phoneNumber, Adresse adress, List<Creneau> creneaux) {
 		setLastName(lastName);
 		setFirstName(firstName);
 		setPhoneNumber(phoneNumber);
+		setAdress(adress);
+		setCreneaux(creneaux);
 	}
 	
-	
-	public void display() {
-		System.out.println(toString());
+	public MedecinGeneraliste(String lastName, String firstName, String phoneNumber, Adresse adress) {
+		setLastName(lastName);
+		setFirstName(firstName);
+		setPhoneNumber(phoneNumber);
+		setAdress(adress);
 	}
 	
-
+	public void ajouterCreneau(Creneau creneauAAjouter) {
+		creneaux.add(creneauAAjouter);
+		creneauAAjouter.setMedecin(this);
+	}
+	
+	public void ajouterCreneaux(Creneau...creneaux) {
+		for(Creneau current : creneaux) {
+			ajouterCreneau(current);
+		}
+	}
+	
 	// getters & setters
 	public String getLastName() {
 		return lastName;
@@ -46,6 +65,15 @@ public class MedecinGeneraliste {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+	
+
+	public List<Creneau> getCreneaux() {
+		return creneaux;
+	}
+
+	public void setCreneaux(List<Creneau> creneaux) {
+		this.creneaux = creneaux;
+	}
 
 	public static int getConsultationPrice() {
 		return consultationPrice;
@@ -55,7 +83,16 @@ public class MedecinGeneraliste {
 		MedecinGeneraliste.consultationPrice = consultationPrice;
 	}
 	
-	// generate toString
+	public Adresse getAdress() {
+		return adress;
+	}
+
+
+	public void setAdress(Adresse adress) {
+		this.adress = adress;
+	}
+
+	
 	@Override
 	public String toString() {
 		return "MedecinGeneraliste [lastName=" 
@@ -63,10 +100,12 @@ public class MedecinGeneraliste {
 						+ ", firstName=" 
 						+ firstName 
 						+ ", phoneNumber=" 
-						+ phoneNumber 
-						+ ", tarif="
-						+ consultationPrice
-						+ "]";
+						+ phoneNumber
+						+ ", adress=" 
+						+ adress 
+						+ ", creneaux=" 
+						+ creneaux + "]";
 	}
+	
 	
 }

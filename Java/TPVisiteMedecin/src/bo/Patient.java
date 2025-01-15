@@ -1,6 +1,5 @@
 package bo;
 
-import java.awt.SecondaryLoop;
 import java.time.LocalDate;
 
 public class Patient {
@@ -13,9 +12,10 @@ public class Patient {
 	private long socialSecurityNumber;
 	private LocalDate birthdayDate;
 	private String comment;
+	private Adresse adress;
 	
 	// constructeur 
-	public Patient(String lastName, String firstName, String phoneNumber, char gender, long socialSecurityNumber, LocalDate birthdayDate, String comment) {
+	public Patient(String lastName, String firstName, String phoneNumber, char gender, long socialSecurityNumber, LocalDate birthdayDate, String comment, Adresse adress) {
 		setLastName(lastName);
 		setFirstName(firstName);
 		setPhoneNumber(phoneNumber);
@@ -23,19 +23,14 @@ public class Patient {
 		setSocialSecurityNumber(socialSecurityNumber);
 		setBirthdayDate(birthdayDate);
 		setComment(comment);
+		setAdress(adress);
 	}
 	
 	// constructeur avec le commentaire en facultatif ("" = vide)
-	public Patient(String lastName, String firstName, String phoneNumber, char gender, long socialSecurityNumber, LocalDate birthdayDate) {
-		this(lastName, firstName, phoneNumber, gender, socialSecurityNumber, birthdayDate, "");
+	public Patient(String lastName, String firstName, String phoneNumber, char gender, long socialSecurityNumber, LocalDate birthdayDate, Adresse adress) {
+		this(lastName, firstName, phoneNumber, gender, socialSecurityNumber, birthdayDate, "", adress);
 	}
 	
-	// méthodes
-	public void display()
-	{
-		System.out.println(toString());
-	}
-
 	// getters and setters
 	public String getLastName() {
 		return lastName;
@@ -80,6 +75,14 @@ public class Patient {
 		this.comment = comment;
 	}
 	
+	public Adresse getAdress() {
+		return adress;
+	}
+
+	public void setAdress(Adresse adress) {
+		this.adress = adress;
+	}
+
 	@Override
 	public String toString() {
 		String result = "Patient [lastName=" 
@@ -100,6 +103,8 @@ public class Patient {
 		} else {
 			result += comment;
 		}
+		result += ", adress=";
+		result += adress ;
 		result += "]";
 		return result;
 	}
