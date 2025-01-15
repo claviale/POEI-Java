@@ -23,6 +23,15 @@ public class Groupe {
 		eleveAAjouter.setGroupe(this);
 	}
 	
+	// Ajouter tous les élèves au groupe
+	// Le paramètre "leves" est considéré comme un tableau
+	
+	public void ajouterEleves(Eleve...eleves) {
+		for (Eleve current : eleves) {
+			ajouterEleve(current);
+		}
+	}
+	
 	public String getNom() {
 		return nom;
 	}
