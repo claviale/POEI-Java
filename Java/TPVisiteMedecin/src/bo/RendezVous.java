@@ -15,8 +15,21 @@ public class RendezVous {
 
 	@Override
 	public String toString() {
-		return "RendezVous [creneau=" + creneau + ", patient=" + patient + ", date=" + date + "]";
+		String result = "";
+		
+		result += "Rendez-vous du " 
+					+ date 
+					+ " à " 
+					+ creneau.getTime() 
+					+ " (" 
+					+  creneau.getDuration()
+					+ " minutes)"
+					+ "\n";
+		
+		result += "avec le Dr " + creneau.getMedecin().getLastName() + "\n";
+		result += "Patient :  \n" + patient;
+		result += "A l'adresse :\n" + creneau.getMedecin().getAdress();
+		
+		return result;
 	}
-	
-
 }
