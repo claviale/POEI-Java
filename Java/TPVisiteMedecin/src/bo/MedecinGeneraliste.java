@@ -1,104 +1,24 @@
 package bo;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class MedecinGeneraliste {
+public class MedecinGeneraliste extends Medecin {
 	
-	// attributs
-	private String lastName;
-	private String firstName;
-	private String phoneNumber;
-	private Adresse adress;
-	private List<Creneau> creneaux = new ArrayList<Creneau>();
+	private static int tarif;
 	
-	private static int consultationPrice;
-	
-	// constructeur 
 	public MedecinGeneraliste(String lastName, String firstName, String phoneNumber, Adresse adress) {
-		setLastName(lastName);
-		setFirstName(firstName);
-		setPhoneNumber(phoneNumber);
-		setAdress(adress);
+		super(lastName, firstName, phoneNumber, adress);
 	}
-	
-	public void ajouterCreneau(Creneau creneauAAjouter) {
-		creneaux.add(creneauAAjouter);
-	}
-	
-	
-	// getters & setters
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-	
-
-	public List<Creneau> getCreneaux() {
-		return creneaux;
-	}
-
-	public void setCreneaux(List<Creneau> creneaux) {
-		this.creneaux = creneaux;
-	}
-
-	public static int getConsultationPrice() {
-		return consultationPrice;
-	}
-
-	public static void setConsultationPrice(int consultationPrice) {
-		MedecinGeneraliste.consultationPrice = consultationPrice;
-	}
-	
-	public Adresse getAdress() {
-		return adress;
-	}
-
-
-	public void setAdress(Adresse adress) {
-		this.adress = adress;
-	}
-
 	
 	@Override
-	public String toString() {
-		String result = "MedecinGeneraliste [lastName=" 
-						+ lastName 
-						+ ", firstName=" 
-						+ firstName 
-						+ ", phoneNumber=" 
-						+ phoneNumber
-						+ ", adress=" 
-						+ adress 
-						+ ", consultationPrice=" 
-						+ consultationPrice;
-		
-			result += "\nCreneaux :\n";
-			for (Creneau current : creneaux) {
-				result += " - " + current.getTime() + " (" + current.getDuration() + " minutes)\n";
-			}
-						
-			result += "]";
-			return result;
+	public int recupererTarif() {
+		return tarif;
 	}
 	
+	public static int getTarif() {
+		return tarif;
+	}
+	
+	public static void setTarif(int tarif) {
+		MedecinGeneraliste.tarif = tarif;
+	}
+
 }

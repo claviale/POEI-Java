@@ -6,9 +6,9 @@ public class Creneau {
 
 	private LocalTime time;
 	private int duration;
-	private MedecinGeneraliste medecin;
+	private Medecin medecin;
 	
-	public Creneau(LocalTime time, int duration, MedecinGeneraliste medecin) {
+	public Creneau(LocalTime time, int duration, Medecin medecin) {
 		this.time = time;
 		this.duration = duration;
 		this.medecin = medecin;
@@ -17,7 +17,7 @@ public class Creneau {
 		this.medecin.ajouterCreneau(this);
 	}
 
-	public MedecinGeneraliste getMedecin() {
+	public Medecin getMedecin() {
 		return medecin;
 	}
 	
@@ -37,7 +37,7 @@ public class Creneau {
 		this.duration = duration;
 	}
 	
-	public void setMedecin(MedecinGeneraliste medecin) {
+	public void setMedecin(Medecin medecin) {
 		this.medecin = medecin;
 	}
 
