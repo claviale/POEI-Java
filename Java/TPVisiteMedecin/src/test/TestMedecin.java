@@ -1,6 +1,5 @@
 package test;
 
-
 import bo.Adresse;
 import bo.MedecinGeneraliste;
 
@@ -16,8 +15,8 @@ public class TestMedecin {
 		MedecinGeneraliste doctor3 = new MedecinGeneraliste("Dorian", "John", "07.33.25.68.74", new Adresse(30, "avenue", "Goblins (des)", "44000", "Nantes"));
 		
 		//Affectation du tarif initial de la consultation
-		MedecinGeneraliste.setConsultationPrice(25);
-		System.out.println("Prix de la consultation : " + MedecinGeneraliste.getConsultationPrice() + " €");
+		MedecinGeneraliste.setTarif(25);
+		System.out.println("Prix de la consultation : " + MedecinGeneraliste.getTarif() + " €");
 		
 		//Affichage des 3 médecins
 		System.out.println(doctor1.toString());
@@ -29,8 +28,8 @@ public class TestMedecin {
 		System.out.println("Nouveau numéro renseigné pour Dr " + doctor1.getLastName() + " : " + doctor1.getPhoneNumber());
 		
 		//Mise à jour du prix de consultation des médecins
-		MedecinGeneraliste.setConsultationPrice(30);
-		System.out.println("Nouveau tarif de consultation depuis le 01/11/24 : " + MedecinGeneraliste.getConsultationPrice() + " €");
+		MedecinGeneraliste.setTarif(30);
+		System.out.println("Nouveau tarif de consultation depuis le 01/11/24 : " + MedecinGeneraliste.getTarif() + " €");
 		
 		//Nouvel affichage des 3 médecins
 		System.out.println("Mise à  jour des coordonnées des médecins :");
