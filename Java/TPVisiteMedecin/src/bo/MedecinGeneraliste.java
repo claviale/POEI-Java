@@ -15,14 +15,6 @@ public class MedecinGeneraliste {
 	private static int consultationPrice;
 	
 	// constructeur 
-	public MedecinGeneraliste(String lastName, String firstName, String phoneNumber, Adresse adress, List<Creneau> creneaux) {
-		setLastName(lastName);
-		setFirstName(firstName);
-		setPhoneNumber(phoneNumber);
-		setAdress(adress);
-		setCreneaux(creneaux);
-	}
-	
 	public MedecinGeneraliste(String lastName, String firstName, String phoneNumber, Adresse adress) {
 		setLastName(lastName);
 		setFirstName(firstName);
@@ -32,14 +24,8 @@ public class MedecinGeneraliste {
 	
 	public void ajouterCreneau(Creneau creneauAAjouter) {
 		creneaux.add(creneauAAjouter);
-		creneauAAjouter.setMedecin(this);
 	}
 	
-	public void ajouterCreneaux(Creneau...creneaux) {
-		for(Creneau current : creneaux) {
-			ajouterCreneau(current);
-		}
-	}
 	
 	// getters & setters
 	public String getLastName() {
@@ -95,7 +81,7 @@ public class MedecinGeneraliste {
 	
 	@Override
 	public String toString() {
-		return "MedecinGeneraliste [lastName=" 
+		String result = "MedecinGeneraliste [lastName=" 
 						+ lastName 
 						+ ", firstName=" 
 						+ firstName 
@@ -103,9 +89,16 @@ public class MedecinGeneraliste {
 						+ phoneNumber
 						+ ", adress=" 
 						+ adress 
-						+ ", creneaux=" 
-						+ creneaux + "]";
+						+ ", consultationPrice=" 
+						+ consultationPrice;
+		
+			result += "\nCreneaux :\n";
+			for (Creneau current : creneaux) {
+				result += " - " + current.getTime() + " (" + current.getDuration() + " minutes)\n";
+			}
+						
+			result += "]";
+			return result;
 	}
-	
 	
 }
