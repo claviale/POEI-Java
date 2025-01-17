@@ -1,13 +1,12 @@
 package bo;
 
-public class Personne {
+public abstract class Personne {
 	protected String lastName;
 	protected String firstName;
 	protected String phoneNumber;
 	protected Adresse adress;
 	
 	public Personne(String lastName, String firstName, String phoneNumber, Adresse adress) {
-		super();
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.phoneNumber = phoneNumber;
