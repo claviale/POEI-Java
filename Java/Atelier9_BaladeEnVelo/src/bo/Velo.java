@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class Velo extends Cycle {
 	protected int nbVitesses;
+	private static final float TARIF = 4.90f;
 	
 	public Velo(String marque, String modele, LocalDate dateAchat, int nbVitesses) {
 		super(marque, modele, dateAchat);
@@ -11,10 +12,9 @@ public class Velo extends Cycle {
 	}
 	
 	@Override
-	public double getTarif(double tarif) {
-		return tarif;
+	public float getTarif() {
+		return TARIF;
 	}
-	
 	
 	public int getNbVitesses() {
 		return nbVitesses;
@@ -26,14 +26,9 @@ public class Velo extends Cycle {
 
 	@Override
 	public String toString() {
-		return "Vélo "
-				+ marque + " "
-				+ modele + " :………………………………………………… " + getTarif(4.90) + "€/heure"
-				+ "\n\t"
-				+ "•  Acheté le " + dateAchat
-				+ "\n\t"
-				+ "•  " + nbVitesses + " vitesses";
+		return super.toString()
+			+ "\n\t• "
+			+ nbVitesses + " vitesses";
 	}
-
 	
 }

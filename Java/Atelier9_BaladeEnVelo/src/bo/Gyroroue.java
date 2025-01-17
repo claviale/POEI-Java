@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class Gyroroue extends Cycle{
 	protected int autonomie;
+	private static final float TARIF = 18.90f;
 
 	public Gyroroue(String marque, String modele, LocalDate dateAchat, int autonomie) {
 		super(marque, modele, dateAchat);
@@ -11,10 +12,10 @@ public class Gyroroue extends Cycle{
 	}
 	
 	@Override
-	public double getTarif(double tarif) {
-		return tarif;
+	public float getTarif() {
+		return TARIF;
 	}
-	
+
 	
 	public int getAutonomie() {
 		return autonomie;
@@ -26,13 +27,9 @@ public class Gyroroue extends Cycle{
 	
 	@Override
 	public String toString() {
-		return "Gyroroue "
-				+ marque + " "
-				+ modele + " :………………………………………………… " + getTarif(18.90) + "€/heure"
-				+ "\n\t"
-				+ "•  Acheté le " + dateAchat
-				+ "\n\t"
-				+ "•  " + autonomie + " km d'autonomie";
+		return super.toString()
+			+ "\n\t•"
+			+ autonomie + "km d'autonomie";
 	}
 	
 	

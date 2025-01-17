@@ -13,7 +13,7 @@ public abstract class Cycle {
 		this.dateAchat = dateAchat;
 	}
 	
-	public abstract double getTarif(double tarif);
+	public abstract float getTarif();
 	
 	public String getMarque() {
 		return marque;
@@ -41,8 +41,27 @@ public abstract class Cycle {
 
 	@Override
 	public String toString() {
-		return "Cycle [marque=" + marque + ", modele=" + modele + ", dateAchat=" + dateAchat + "]";
+		String intro = getClass().getSimpleName()
+				+ " "
+				+ marque
+				+ " "
+				+ modele
+				+ " : ";
+		
+		int introLenght = intro.length();
+		String tarif = String.format(" %.2f€/heure", getTarif());
+		int tarifLenght = tarif.length();
+		
+		int fillerLenght = 64 - introLenght - tarifLenght;
+		
+		String filler = ".".repeat(fillerLenght);
+		
+		String result = intro
+					+ filler
+					+ tarif
+					+ "\n\t• "
+					+ "Acheté le " + dateAchat;
+		
+		return result;
 	}
-	
-	
 }
