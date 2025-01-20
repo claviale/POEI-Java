@@ -24,7 +24,7 @@ public class Groupe {
 	}
 	
 	// Ajouter tous les élèves au groupe
-	// Le paramètre "leves" est considéré comme un tableau
+	// Le paramètre "eleves" est considéré comme un tableau
 	
 	public void ajouterEleves(Eleve...eleves) {
 		for (Eleve current : eleves) {
