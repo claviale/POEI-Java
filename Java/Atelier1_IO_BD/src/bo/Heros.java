@@ -5,9 +5,9 @@ import java.time.LocalDate;
 public class Heros {
 	private String nom;
 	private String prenom;
-	private String dateNaissance;
+	private LocalDate dateNaissance;
 	
-	public Heros(String nom, String prenom, String dateNaissance) {
+	public Heros(String nom, String prenom, LocalDate dateNaissance) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.dateNaissance = dateNaissance;
@@ -21,7 +21,14 @@ public class Heros {
 		return prenom;
 	}
 	
-	public String getDateNaissance() {
+	public LocalDate getDateNaissance() {
 		return dateNaissance;
 	}
+
+	@Override
+	public String toString() {
+		return "Heros : " + nom + " " + prenom + ", né le " + dateNaissance ;
+	}
+	
+	
 }
