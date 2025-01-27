@@ -12,7 +12,7 @@ import exceptions.ComposantException;
 public class ComposantController {
 	
 	public int showMenu(){
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("-----------------------------------------------------");
         System.out.println("\tQuel action souhaitez-vous réaliser ? ");
         System.out.println("------------------------------------------------------\n");
@@ -21,23 +21,23 @@ public class ComposantController {
         System.out.println("3. Supprimer un composant");
         System.out.println("4. Quitter l'application");
        
-        return scanner.nextInt();    
+        return scan.nextInt();    
     }
 	
 
     public void createProduct(){
     	ComposantBLL composantBLL = new ComposantBLL();
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         try {
             System.out.println("Pour créer un nouveau composant, saisissez les informations suivantes : ");
             System.out.println("Nom du composant : ");
-            String nom = scanner.nextLine();
+            String nom = scan.nextLine();
             
             System.out.println("Nature du composant : ");
-            String nature = scanner.nextLine();
+            String nature = scan.nextLine();
             
             System.out.println("Date de sortie du composant : ");
-            String dateInput = scanner.nextLine();
+            String dateInput = scan.nextLine();
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("[d/M/y][y-M-d]");
             LocalDate dateSortie = LocalDate.parse(dateInput, dtf);
             
@@ -63,16 +63,19 @@ public class ComposantController {
     
     public void delete() {
     	ComposantBLL composantBLL = new ComposantBLL();
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         
         System.out.println("Saisissez le numéro du composant à supprimer :  ");
-        int id = scanner.nextInt();
-        composantBLL.delete(id);
-        System.out.println("Composant supprimé !");
-        System.out.println("Mise à jour de la liste des composants...");
-        showAll();
-       
+        int id = scan.nextInt();
+        Composant composant = composantBLL.select(id);
+        
+        if(composant != null) {
+        	composantBLL.delete(id);
+            System.out.println("Composant supprimé !");
+            System.out.println("Mise à jour de la liste des composants...");
+            showAll();
+        } else {
+        System.err.println("Il n'y a pas de composant enregistré avec cet identifiant.");
+        }
     }
-
-	
 }
