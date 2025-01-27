@@ -14,6 +14,11 @@ public class ComposantBLL {
 		return dao.select();
 	}
 	
+	public Composant select(int id) {
+		ComposantDAO dao = new ComposantDAO();
+		return dao.select(id);	
+	}
+	
 	public Composant insert(String nom, String nature, LocalDate dateSortie) throws ComposantException {
 		Composant composant = new Composant(nom, nature, dateSortie);
 		checkComposant(composant);
@@ -39,7 +44,7 @@ public class ComposantBLL {
 	}
 	
 	public void delete(int id) {
-		ComposantDAO dao = new ComposantDAO();;
+		ComposantDAO dao = new ComposantDAO();
 		dao.delete(id);
 	}
 }

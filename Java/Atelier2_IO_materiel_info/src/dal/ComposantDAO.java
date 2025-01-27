@@ -35,6 +35,29 @@ public class ComposantDAO {
 		return composants;
 	}
 	
+	public Composant select(int id) {
+		Composant composant = null;
+		try {
+			Connection cnx = DriverManager.getConnection("jdbc:sqlserver://ROGERPC;databasename=MATERIEL_INFO;username=clara;password=clara;trustservercertificate=true");
+			
+			if(!cnx.isClosed()) {
+				
+				PreparedStatement ps = cnx.prepareStatement("SELECT * FROM composants WHERE id = ?");
+				ps.setInt(1, id);
+				ResultSet rs = ps.executeQuery(); // pour exécuter un SELECT
+				
+				while (rs.next()) {
+					composant = convertResultSetToComposant(rs);
+				}
+			}
+			cnx.close();
+		} catch (SQLException e) {
+			e.printStackTrace();		
+		}
+		
+		return composant;
+	}
+	
 	public void insert(Composant composant) {
 		try {
 			Connection cnx = DriverManager.getConnection("jdbc:sqlserver://ROGERPC;databasename=MATERIEL_INFO;username=clara;password=clara;trustservercertificate=true");
