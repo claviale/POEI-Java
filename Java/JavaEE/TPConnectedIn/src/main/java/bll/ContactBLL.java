@@ -13,6 +13,11 @@ public class ContactBLL {
 		return dao.select();
 	}
 	
+	public List<Contact> selectByNomOrPrenom(String filtre) {
+		return dao.selectByNomOrPrenom(filtre);
+	}
+	
+	
 	public Contact select(int id) {
 		return dao.select(id);
 	}
