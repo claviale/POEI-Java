@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%@ include  file="fragments/entete.jspf" %>
 	<h1>Accueil</h1>
 	<h4>Pour rechercher un contact, saisissez son numéro identifiant :</h4>
 	<form action="contacts" method="GET">
