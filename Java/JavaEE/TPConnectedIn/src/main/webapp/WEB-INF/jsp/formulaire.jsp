@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%@ include  file="fragments/entete.jspf" %>
 	<form action="${action}" method="POST">
 		<input type="hidden" value="${contact.id}" name="id">
 		<div>

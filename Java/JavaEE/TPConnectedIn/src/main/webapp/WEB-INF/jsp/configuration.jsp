@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%@ include  file="fragments/entete.jspf" %>
 	<H1>Configuration de l'application</H1>
 	<p>Saisissez une valeur par défaut pour les champs suivants :</p>
 	<form action="configuration" method="POST">
