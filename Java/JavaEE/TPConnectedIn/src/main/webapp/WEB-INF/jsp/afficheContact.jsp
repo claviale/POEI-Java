@@ -19,16 +19,7 @@
 		<p>Spécialité : ${contact.specialite}</p>
 	</fieldset>
 	<br>
-		<form action="ModificationContact" method="GET">
-		<input type="hidden" name="id" value="${contact.id}">
-		<input type="submit" value="Modifier le contact">
-	</form>
-	<br>
-	<form action="SuppressionContact" method="post">
-		<input type="hidden" name="id" value="${contact.id}">
-		<input type="submit" value="Supprimer le contact">
-	</form>
-	<br>
+
 	<div>
 	<a href="Accueil">Retour à l'accueil</a>
 	</div>
