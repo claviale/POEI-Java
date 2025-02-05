@@ -101,7 +101,4 @@ public class Contact {
 		this.specialite = specialite;
 	}
 	
-	
-	
-	
 }

@@ -21,15 +21,21 @@ public class AccueilServlet extends HttpServlet {
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String filtre = request.getParameter("filtre");
+		// Affiche l'username
+		String username = (String) request.getSession().getAttribute("username");
+		request.setAttribute("username", username);
 		
+		// Affiche la liste des contacts
 		List<Contact> contacts = contactBLL.select();
 		
+		// Permet le filtre de la liste de contacts
+		String filtre = request.getParameter("filtre");
 		if(filtre == null || filtre.isBlank()) {
 			request.setAttribute("contacts", contacts);
 		} else {
 			request.setAttribute("contacts", contactBLL.selectByNomOrPrenom(filtre));
 		}
+		
 		request.getRequestDispatcher("/WEB-INF/jsp/accueil.jsp").forward(request, response);
 		
 	}
