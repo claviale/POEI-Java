@@ -10,6 +10,8 @@
 <body>
 	<%@ include  file="fragments/entete.jspf" %>
 	<h1>Accueil</h1>
+	<p>Connecté en tant que : ${username } </p>
+	<a href="deconnexion">Se déconnecter</a>
 	<h4>Pour voir les détails d'un contact, saisissez son numéro identifiant :</h4>
 	<form action="contacts" method="GET">
 		<input type="number" name="id">
