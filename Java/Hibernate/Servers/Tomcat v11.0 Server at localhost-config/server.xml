@@ -136,7 +136,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="DemoSetup" path="/DemoSetup" reloadable="true" source="org.eclipse.jst.jee.server:DemoSetup"/><Context docBase="TPRechercherNombre" path="/TPRechercherNombre" reloadable="true" source="org.eclipse.jst.jee.server:TPRechercherNombre"/><Context docBase="TPConnectedIn" path="/TPConnectedIn" reloadable="true" source="org.eclipse.jst.jee.server:TPConnectedIn"/><Context docBase="DemoConnexionBDD" path="/DemoConnexionBDD" reloadable="true" source="org.eclipse.jst.jee.server:DemoConnexionBDD"/><Context docBase="DemoContexteStockage" path="/DemoContexteStockage" reloadable="true" source="org.eclipse.jst.jee.server:DemoContexteStockage"/><Context docBase="DemoJSTL" path="/DemoJSTL" reloadable="true" source="org.eclipse.jst.jee.server:DemoJSTL"/><Context docBase="DemoFiltres" path="/DemoFiltres" reloadable="true" source="org.eclipse.jst.jee.server:DemoFiltres"/><Context docBase="DemoHibernate" path="/DemoHibernate" reloadable="true" source="org.eclipse.jst.jee.server:DemoHibernate"/></Host>
+      <Context docBase="TP02_Hibernate_Filmotheque" path="/TP02_Hibernate_Filmotheque" reloadable="true" source="org.eclipse.jst.jee.server:TP02_Hibernate_Filmotheque"/></Host>
     </Engine>
   </Service>
 </Server>
