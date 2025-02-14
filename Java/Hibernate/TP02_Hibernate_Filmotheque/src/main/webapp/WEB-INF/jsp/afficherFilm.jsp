@@ -67,10 +67,10 @@
 				<div class="form-group">			
 					<label for="real" class="col-xs-2 control-label">Réalisateur :</label>
 					<div class="col-xs-5">
-						<input id="real" value="${film.real.prenom}" readonly   class="form-control" /> 
+						<input id="real" value="${film.realisateur.prenom}" readonly class="form-control" /> 
 					</div>
 					<div class="col-xs-5">
-						<input value="${film.real.nom}"   readonly class="form-control" /> 
+						<input value="${film.realisateur.nom}" readonly class="form-control" /> 
 					</div>
 				</div>
 

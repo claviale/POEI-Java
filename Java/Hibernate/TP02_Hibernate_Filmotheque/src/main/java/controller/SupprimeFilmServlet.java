@@ -6,24 +6,26 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 import bll.FilmBLL;
 import entities.Film;
 
 /**
- * Servlet implementation class ListeFilmsServlet
+ * Servlet implementation class SupprimeFilmServlet
  */
-@WebServlet("/lister")
-public class ListeFilmsServlet extends HttpServlet {
+@WebServlet("/supprimer")
+public class SupprimeFilmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static FilmBLL filmBLL = new FilmBLL();
-
+	private FilmBLL filmBLL = new FilmBLL();
+       
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Film> films = filmBLL.select();
-		request.setAttribute("listeF", films);
-
+		String pId = request.getParameter("index").substring(1);
+		Film filmToDelete = filmBLL.selectById(Integer.parseInt(pId));
 		
-		request.getRequestDispatcher("/WEB-INF/jsp/listeFilms.jsp").forward(request, response);
+		filmBLL.delete(filmToDelete);
+		
+		response.sendRedirect("lister");
 	}
+
+
 }

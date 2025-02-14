@@ -14,7 +14,20 @@ public class Realisateur {
 	
 	private String prenom;
 	private String nom;
-	
+
+	public Realisateur(int id, String prenom, String nom) {
+		this.id = id;
+		this.prenom = prenom;
+		this.nom = nom;
+	}
+
+	public Realisateur(String prenom, String nom) {
+		this.prenom = prenom;
+		this.nom = nom;
+	}
+
+
+
 	public Realisateur() {}
 
 	public int getId() {

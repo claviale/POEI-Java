@@ -11,19 +11,21 @@ import bll.StyleBLL;
 import entities.Style;
 
 /**
- * Servlet implementation class AjoutStyleServlet
+ * Servlet implementation class SupprimeStyleServlet
  */
-@WebServlet("/ajouterStyle")
-public class AjoutStyleServlet extends HttpServlet {
+@WebServlet("/modifStyle")
+public class ModifieStyleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-  
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int id = Integer.valueOf(request.getParameter("id"));
 		String libelle = request.getParameter("libelle");
-		Style style = new Style(libelle);
-		
 		StyleBLL styleBLL = new StyleBLL();
-		styleBLL.insert(style);
+		
+		Style style = styleBLL.selectById(id);
+		style.setLibelle(libelle);
+		
+		styleBLL.update(style);
 		
 		response.sendRedirect("listerStyle");
 	}
