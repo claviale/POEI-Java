@@ -14,6 +14,11 @@ public class Style {
 	
 	private String libelle;
 	
+	public Style(int id, String libelle) {
+		this.id = id;
+		this.libelle = libelle;
+	}
+
 	public Style(String libelle) {
 		this.libelle = libelle;
 	}
@@ -35,5 +40,11 @@ public class Style {
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
 	}
+
+	@Override
+	public String toString() {
+		return "Style [id=" + id + ", libelle=" + libelle + "]";
+	}
+	
 	
 }

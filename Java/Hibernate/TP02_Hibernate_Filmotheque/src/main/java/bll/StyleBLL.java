@@ -22,6 +22,10 @@ public class StyleBLL {
 	}
 	
 	public void insert(Style style) {
+		if (style.getLibelle() == null || style.getLibelle().trim().isEmpty()) {
+			throw new IllegalArgumentException("Le libellé ne peut pas être vide");
+		}
+		
 		dao.insert(style);
 	}
 	
@@ -30,6 +34,14 @@ public class StyleBLL {
 	}
 	
 	public void delete(Style style) {
-		dao.delete(style);
+		//if (style == null || style.getId() <= 0) {
+		//	throw new IllegalArgumentException("Le style n'existe pas");
+		//}
+		Style existingStyle = dao.selectById(style.getId());
+		if (existingStyle == null) {
+			 throw new IllegalArgumentException("Style non trouvé");
+		}
+		
+		dao.delete(existingStyle);
 	}
 }

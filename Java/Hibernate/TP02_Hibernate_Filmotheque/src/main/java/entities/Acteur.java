@@ -15,6 +15,21 @@ public class Acteur {
 	private String prenom;
 	private String nom;
 	
+	public Acteur(int id, String prenom, String nom) {
+		super();
+		this.id = id;
+		this.prenom = prenom;
+		this.nom = nom;
+	}
+
+	public Acteur(String prenom, String nom) {
+		super();
+		this.prenom = prenom;
+		this.nom = nom;
+	}
+
+
+
 	public Acteur() {}
 
 	public int getId() {

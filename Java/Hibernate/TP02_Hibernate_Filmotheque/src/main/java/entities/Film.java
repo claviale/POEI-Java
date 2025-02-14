@@ -1,7 +1,5 @@
 package entities;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -11,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -24,24 +23,50 @@ public class Film {
 	private int id;
 	
 	private String titre;
-	private LocalDate annee;
-	private LocalDateTime duree;
+	private int annee;
+	private int duree;
 	private boolean vu;
 	private String synopsis;
 	
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne
 	@JoinColumn(name = "style_id")
 	private Style style;
 	
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "realisateur_id")
 	private Realisateur realisateur;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "film_id")
 	private List<Acteur> acteurs;
-
 	
+	
+	
+	public Film(int id, String titre, int annee, int duree, boolean vu, String synopsis, Style style,
+			Realisateur realisateur, List<Acteur> acteurs) {
+		this.id = id;
+		this.titre = titre;
+		this.annee = annee;
+		this.duree = duree;
+		this.vu = vu;
+		this.synopsis = synopsis;
+		this.style = style;
+		this.realisateur = realisateur;
+		this.acteurs = acteurs;
+	}
+	
+	public Film(String titre, int annee, int duree, boolean vu, String synopsis, Style style,
+			Realisateur realisateur, List<Acteur> acteurs) {
+		this.titre = titre;
+		this.annee = annee;
+		this.duree = duree;
+		this.vu = vu;
+		this.synopsis = synopsis;
+		this.style = style;
+		this.realisateur = realisateur;
+		this.acteurs = acteurs;
+	}
+
 	public Film() {}
 
 	
@@ -61,19 +86,19 @@ public class Film {
 		this.titre = titre;
 	}
 
-	public LocalDate getAnnee() {
+	public int getAnnee() {
 		return annee;
 	}
 
-	public void setAnnee(LocalDate annee) {
+	public void setAnnee(int annee) {
 		this.annee = annee;
 	}
 
-	public LocalDateTime getDuree() {
+	public int getDuree() {
 		return duree;
 	}
 
-	public void setDuree(LocalDateTime duree) {
+	public void setDuree(int duree) {
 		this.duree = duree;
 	}
 
@@ -115,6 +140,13 @@ public class Film {
 
 	public void setActeurs(List<Acteur> acteurs) {
 		this.acteurs = acteurs;
+	}
+
+	@Override
+	public String toString() {
+		return "Film [id=" + id + ", titre=" + titre + ", annee=" + annee + ", duree=" + duree + ", vu=" + vu
+				+ ", synopsis=" + synopsis + ", style=" + style + ", realisateur=" + realisateur + ", acteurs="
+				+ acteurs + "]";
 	}
 	
 	

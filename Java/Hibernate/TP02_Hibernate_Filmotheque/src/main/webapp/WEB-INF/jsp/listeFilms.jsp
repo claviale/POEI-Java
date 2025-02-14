@@ -70,8 +70,8 @@ img {
 				<td><a href="afficher?index=${f.id}">${f.titre}</a></td>
 				<td>${f.annee}</td>
 				<td>${f.style.libelle}</td>
-				<td>${f.real.prenom} ${f.real.nom}</td>
-				<td>${f.duree}</td>
+				<td>${f.realisateur.prenom} ${f.realisateur.nom}</td>
+				<td>${f.duree} min</td>
 				<td>${f.vu?"Oui":"Non"}</td>
 				<td class="centre">
 					<span class="modif glyphicon glyphicon-edit vert"  id="m${f.id}"></span>

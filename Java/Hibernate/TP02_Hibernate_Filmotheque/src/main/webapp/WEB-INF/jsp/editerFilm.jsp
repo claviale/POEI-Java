@@ -72,10 +72,10 @@
 				<div class="form-group">			
 					<label for="real.prenom" class="col-xs-2 control-label">Réalisateur :</label>
 					<div class="col-xs-5">
-						<input id="real.prenom"  name="real.prenom" value="${film.real.prenom}" placeholder="Prénom ..."  class="form-control" /> 
+						<input id="real.prenom"  name="real.prenom" value="${film.realisateur.prenom}" placeholder="Prénom ..."  class="form-control" /> 
 					</div>
 					<div class="col-xs-5">
-						<input name="real.nom"  value="${film.real.nom}" placeholder="Nom ..."  class="form-control" /> 
+						<input name="real.nom"  value="${film.realisateur.nom}" placeholder="Nom ..."  class="form-control" /> 
 					</div>
 				</div>
 
