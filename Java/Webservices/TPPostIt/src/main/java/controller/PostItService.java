@@ -1,6 +1,5 @@
 package controller;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import bll.PostItBLL;
@@ -45,16 +44,13 @@ public class PostItService {
 	
 	@PUT @Path("/{id : \\d+}")
 	public PostIt updatePostIt(@PathParam("id") int id, PostIt postIt) {
-		PostIt postItAModif = bll.selectById(id);
-		postItAModif.setTitre(postIt.getTitre());
-		postItAModif.setContenu(postIt.getContenu());
-		postItAModif.setDateModification(LocalDate.now());
-		bll.update(postItAModif);
-		return postItAModif;	
+		postIt.setId(id);
+		bll.update(postIt);
+		return postIt;	
 	}
 	
 	@DELETE @Path("/{id : \\d+}")
-	public PostIt deleteCrayon(@PathParam("id") int id) {
+	public PostIt deletePostIt(@PathParam("id") int id) {
 		PostIt postItASuppr = bll.selectById(id);
 		bll.delete(postItASuppr);
 		return postItASuppr;
