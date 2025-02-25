@@ -1,10 +1,10 @@
 package bll;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import bo.PostIt;
 import dal.PostItDAO;
-import exceptions.PostItException;
 
 public class PostItBLL {
 	private PostItDAO dao;
@@ -22,11 +22,16 @@ public class PostItBLL {
 	}
 	
 	public void insert(PostIt postIt) {
+		postIt.setDateCreation(LocalDate.now());
 		dao.insert(postIt);
 	}
 	
 	public void update(PostIt postIt) {
-		dao.update(postIt);
+		PostIt old = selectById(postIt.getId());
+		old.setTitre(postIt.getTitre());
+		old.setContenu(postIt.getContenu());
+		old.setDateModification(LocalDate.now());
+		dao.update(old);
 	}
 	
 	public void delete(PostIt postIt) {
