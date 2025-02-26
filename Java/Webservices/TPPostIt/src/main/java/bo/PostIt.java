@@ -17,27 +17,13 @@ public class PostIt {
 	
 	private String titre;
 	private String contenu;
+	private String couleur;
 	
 	@Column(name = "date_creation")
 	private LocalDate dateCreation;
 	
 	@Column(name = "date_modification")
 	private LocalDate dateModification;
-
-	public PostIt(int id, String titre, String contenu, LocalDate dateCreation, LocalDate dateModification) {
-		this.id = id;
-		this.titre = titre;
-		this.contenu = contenu;
-		this.dateCreation = dateCreation;
-		this.dateModification = dateModification;
-	}
-
-	public PostIt(String titre, String contenu, LocalDate dateCreation, LocalDate dateModification) {
-		this.titre = titre;
-		this.contenu = contenu;
-		this.dateCreation = dateCreation;
-		this.dateModification = dateModification;
-	}
 
 	public PostIt() {}
 
@@ -65,6 +51,16 @@ public class PostIt {
 	public void setContenu(String contenu) {
 		this.contenu = contenu;
 	}
+
+	public String getCouleur() {
+		return couleur;
+	}
+
+
+	public void setCouleur(String couleur) {
+		this.couleur = couleur;
+	}
+
 
 	public LocalDate getDateCreation() {
 		return dateCreation;
