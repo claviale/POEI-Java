@@ -1,0 +1,79 @@
+body {
+    font-family: Consolas, monaco, monospace; 
+}
+
+h1 { 
+    font-family: Consolas, monaco, monospace; 
+    font-size: 29px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px; 
+}
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+}
+
+.vert {
+    color: #5cb85c;
+}
+
+#couleur {
+    height: 40px;
+}
+
+.postit > input[type="text"], .postit > textarea {
+    background-color: rgba(255,255,255, 0);
+}
+
+.postit > input[type="text"]:hover, .postit > textarea:hover {
+    background-color: rgba(255,255,255, .2);
+}
+
+.postit > input[type="text"]:focus, .postit > textarea:focus {
+    background-color: rgba(255,255,255, .75);
+}
+
+.postit > .form-control {
+    border: 0;
+}
+
+.update-button {
+    width: 100%;
+    margin-top: 20px;
+    height: 40px;
+    border: solid rgba(255,255,255, .5) 1px;
+    background-color: rgba(255,255,255, .2);
+}
+
+.update-button:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.5); 
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.5);
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.confirm {
+    background-color: rgba(9, 160, 54, .5);
+}
+
+textarea {
+    resize: none;
+}
+
+.postit > textarea {
+    width: 100%;
+    overflow: hidden;
+    height: 140px;
+}
+
