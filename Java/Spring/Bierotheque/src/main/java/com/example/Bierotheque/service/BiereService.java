@@ -9,5 +9,6 @@ public interface BiereService {
 	public List<Biere> getAll();
 	public void update(Biere biere) throws BiereServiceException;
 	public void delete(Biere biere) throws BiereServiceException;
+	public List<Biere> findByNomAndBrasserie_Nom(String nom, String brasserieNom);
 
 }

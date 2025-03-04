@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.demoData.entity.Caracteristique;
 import com.example.demoData.entity.Maison;
 import com.example.demoData.entity.Personne;
 import com.example.demoData.service.MaisonService;
@@ -14,6 +15,7 @@ import com.example.demoData.service.PersonneService;
 import com.example.demoData.service.PersonneServiceException;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.transaction.Transactional;
 
 @SpringBootApplication
 public class DemoDataApplication implements CommandLineRunner {
@@ -35,8 +37,13 @@ public class DemoDataApplication implements CommandLineRunner {
 	}
 
 	@Override
+	@Transactional
 	public void run(String... args) throws Exception {
 		Maison leLieu = new Maison("Le lieu", "La Selle Craonnaise");
+		
+		leLieu.addCar(new Caracteristique("Super beau"));
+		leLieu.addCar(new Caracteristique("A la campagne"));
+		
 		Maison iciPasLa = new Maison("Ici pas là", "Nantes");
 		maisonService.create(iciPasLa);
 		maisonService.create(leLieu);

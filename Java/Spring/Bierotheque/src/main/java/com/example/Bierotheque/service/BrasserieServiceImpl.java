@@ -23,5 +23,5 @@ class BrasserieServiceImpl implements BrasserieService {
 	public List<Brasserie> getAll() {
 		return repo.findAll();
 	}
-
+	
 }
