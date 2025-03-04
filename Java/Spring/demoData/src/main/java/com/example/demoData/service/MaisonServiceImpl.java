@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.example.demoData.entity.Maison;
 import com.example.demoData.repository.MaisonRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 class MaisonServiceImpl implements MaisonService {
 
@@ -16,6 +18,7 @@ class MaisonServiceImpl implements MaisonService {
 	MaisonRepository repo;
 	
 	@Override
+	@Transactional
 	public void create(Maison maison) throws MaisonServiceException {
 		repo.save(maison);
 	}

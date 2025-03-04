@@ -65,6 +65,12 @@ class BiereServiceImpl implements BiereService {
 			throw new BiereServiceException("Le taux d'alcool de la bière doit être supérieur à 0°.");
 		}
 	}
+
+	@Override
+	public List<Biere> findByNomAndBrasserie_Nom(String nom, String brasserieNom) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 
