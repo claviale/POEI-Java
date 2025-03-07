@@ -1,6 +1,7 @@
 package com.example.demoWS.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,8 +36,14 @@ public class VeloServiceImpl implements VeloService {
 	}
 
 	@Override
-	public Velo getById(Integer id) {
-		return repo.findById(id).orElse(null);
+	public Velo getById(Integer id) throws VeloServiceException {
+		Optional<Velo> velo = repo.findById(id);
+		if(velo.isPresent()) {
+			return velo.get();
+		}
+		else {
+			throw new VeloServiceException("Cette identifiant n'existe pas");
+		}
 	}
 
 }
