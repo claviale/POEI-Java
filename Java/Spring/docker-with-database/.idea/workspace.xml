@@ -5,46 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fb81f3-a200-4e9d-afad-e92bdb25b5ab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../JavaEE/TPConnectedIn/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaEE/TPConnectedIn/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Spring.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demoWS/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demoWS/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/rest/EssaiWS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/rest/EssaiWS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/rest/VeloRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/rest/VeloRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/service/VeloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/service/VeloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/service/VeloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/service/VeloServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/init/01-create-database.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/docker_with_database/DockerWithDatabaseApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/docker_with_database/controller/PatisserieController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/docker_with_database/entity/Patisserie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/docker_with_database/repository/PatisserieRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/docker_with_database/service/PatisserieService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fr/m2i/docker_with_database/DockerWithDatabaseApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp.tar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/src/main/java/fr/m2i/ws_hello_world/WsHelloWorldApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/src/main/java/fr/m2i/ws_hello_world/controller/HelloWorldController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/src/test/java/fr/m2i/ws_hello_world/WsHelloWorldApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-hello-world/tmp.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/classes/fr/m2i/ws_hello_world/WsHelloWorldApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/classes/fr/m2i/ws_hello_world/controller/HelloWorldController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/surefire-reports/TEST-fr.m2i.ws_hello_world.WsHelloWorldApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/surefire-reports/fr.m2i.ws_hello_world.WsHelloWorldApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/test-classes/fr/m2i/ws_hello_world/WsHelloWorldApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/ws-hello-world-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/target/ws-hello-world-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
