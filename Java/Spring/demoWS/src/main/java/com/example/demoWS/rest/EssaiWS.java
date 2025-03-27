@@ -30,9 +30,4 @@ public class EssaiWS {
 		return "coucou en " + lang + age;
 	}
 	
-	@GetMapping("/calculatrice/{nb1}/{nb2}")
-	public String calculatrice(@PathVariable("nb1") Integer nb1, @PathVariable("nb2") Integer nb2) {
-		return "addition de  " + nb1 + " et " + nb2 + " est égal à : " + (nb1+nb2);
-	}
-	
 }
