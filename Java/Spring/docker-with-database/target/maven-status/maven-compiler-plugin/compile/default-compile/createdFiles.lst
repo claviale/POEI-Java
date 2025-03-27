@@ -1,5 +1,0 @@
-fr\m2i\docker_with_database\controller\PatisserieController.class
-fr\m2i\docker_with_database\repository\PatisserieRepository.class
-fr\m2i\docker_with_database\service\PatisserieService.class
-fr\m2i\docker_with_database\DockerWithDatabaseApplication.class
-fr\m2i\docker_with_database\entity\Patisserie.class

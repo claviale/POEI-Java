@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b7fb81f3-a200-4e9d-afad-e92bdb25b5ab" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../JavaEE/TPConnectedIn/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaEE/TPConnectedIn/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoWS/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demoWS/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/rest/EssaiWS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/rest/EssaiWS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/rest/VeloRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/rest/VeloRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/service/VeloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/service/VeloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/service/VeloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demoWS/src/main/java/com/example/demoWS/service/VeloServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/init/01-create-database.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/docker_with_database/DockerWithDatabaseApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/docker_with_database/controller/PatisserieController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/docker_with_database/entity/Patisserie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/docker_with_database/repository/PatisserieRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/docker_with_database/service/PatisserieService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fr/m2i/docker_with_database/DockerWithDatabaseApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/src/main/java/fr/m2i/ws_hello_world/WsHelloWorldApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/src/main/java/fr/m2i/ws_hello_world/controller/HelloWorldController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/src/test/java/fr/m2i/ws_hello_world/WsHelloWorldApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-hello-world/tmp.tar" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2urHy7f15AVEMOf7e0OEjyw3FUH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DockerWithDatabaseApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DockerWithDatabaseApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.docker-with-database [install...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.docker-with-database [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/clara/OneDrive/Bureau/POEI JAVA/POEI-Java/Java/Spring/docker-with-database&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="DockerWithDatabaseApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.m2i.docker_with_database.DockerWithDatabaseApplication" />
+      <module name="docker-with-database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.m2i.docker_with_database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DockerWithDatabaseApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7fb81f3-a200-4e9d-afad-e92bdb25b5ab" name="Changes" comment="" />
+      <created>1743000024789</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743000024789</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
