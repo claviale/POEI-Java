@@ -1,8 +1,10 @@
 package com.example.demoWS.rest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demoWS.entity.Velo;
+import com.example.demoWS.rest.veloDto.VeloDTO;
 import com.example.demoWS.service.VeloService;
+import com.example.demoWS.service.VeloServiceException;
 
 import jakarta.annotation.PostConstruct;
 
@@ -33,21 +37,31 @@ public class VeloRest {
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<Velo>> getAll() {
-		return ResponseEntity.ok(service.getAll());
+	public ResponseEntity<List<VeloDTO>> getAll(){
+		List<VeloDTO> lst = new ArrayList<>();
+		for(Velo velo : service.getAll()) {
+			lst.add(new VeloDTO(velo));
+		}
+		return ResponseEntity.ok(lst);
 	}
 	
+	@SuppressWarnings("rawtypes")
 	@GetMapping("{id}")
-	public ResponseEntity<Velo> getById(@PathVariable("id") Integer id) {
-		// TODO gérer l'id non présent
-		return ResponseEntity.ok(service.getById(id));
+	public ResponseEntity getById(@PathVariable("id") Integer id) {
+		Velo velo;
+		try {
+			velo = service.getById(id);
+		} catch (VeloServiceException e) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("identifiant non trouvé");
+		}
+		return ResponseEntity.ok(new VeloDTO(velo));
 	}
 	
 	@PostMapping
-	public ResponseEntity<Velo> create(@RequestBody Velo velo) {
+	public ResponseEntity<VeloDTO> create(@RequestBody VeloDTO veloDTO){
 		// TODO gérer les exceptions
-		service.create(velo);
-		return ResponseEntity.ok(velo);
+		service.create(veloDTO.toEntity());
+		return ResponseEntity.ok(veloDTO);
 	}
 	
 	/*@PutMapping("{id}")
@@ -61,18 +75,23 @@ public class VeloRest {
 	}*/
 	
 	@PutMapping
-	public ResponseEntity<Velo> update(@RequestBody Velo velo) {
+	public ResponseEntity<VeloDTO> update(@RequestBody VeloDTO veloDTO){
 		// TODO gérer les exceptions
-		service.update(velo);
-		return ResponseEntity.ok(velo);
+		service.update(veloDTO.toEntity());
+		return ResponseEntity.ok(veloDTO);
 	}
 	
+	@SuppressWarnings("rawtypes")
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Velo> delete(@PathVariable("id") Integer id) {
-		// TODO gérer l'id non présent
-		Velo velo = service.getById(id);
+	public ResponseEntity delete(@PathVariable("id") Integer id){
+		Velo velo;
+		try {
+			velo = service.getById(id);
+		} catch (VeloServiceException e) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+		}
 		service.delete(velo);
-		return ResponseEntity.ok(velo);
+		return ResponseEntity.ok(new VeloDTO(velo));
 	}
 	
 }

@@ -9,6 +9,6 @@ public interface VeloService {
 	public void update(Velo velo);
 	public void delete(Velo velo);
 	public List<Velo> getAll();
-	public Velo getById(Integer id);
+	public Velo getById(Integer id) throws VeloServiceException;
 	
 }
