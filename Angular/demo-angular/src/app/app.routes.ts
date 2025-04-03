@@ -7,6 +7,7 @@ import { DirectivesComponent } from './components/directives/directives.componen
 import { ParentComponent } from './components/input/parent/parent.component';
 import { RecepteurRouteComponent } from './components/recepteur-route/recepteur-route.component';
 import { veloAtteignableGuard } from './guards/velo-atteignable.guard';
+import { ApiComponent } from './components/api/api.component';
 
 export const routes: Routes = [
     { path: "cycle-de-vie", component: CycleDeVieComponent },
@@ -15,6 +16,7 @@ export const routes: Routes = [
     { path: "demo-service/lecture", component: LectureComponent },
     { path: "directives", component: DirectivesComponent },
     { path: "input", component: ParentComponent },
+    { path: "api", component: ApiComponent },
     { path: "recepteur/:id", component: RecepteurRouteComponent, canActivate: [veloAtteignableGuard] },
     { path: "**", redirectTo: "/cycle-de-vie" }
 ];
