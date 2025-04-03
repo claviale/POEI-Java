@@ -1,0 +1,22 @@
+
+<div class="container content d-flex justify-content-center align-items-center">
+    <div class="bg-dark p-5 text-light rounded-3">
+    <p>{{ message }}</p>
+    <div>
+        <div class="mb-2">
+            <label for="username" class="form-label">Identifiant</label>
+            <input type="text" class="form-control" id="username" [(ngModel)]="username" >
+        </div>
+        <div class="mb-2">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="password" [(ngModel)]="password">
+        </div>
+        <div class="text-center my-4">
+            <button class="btn btn-success w-100" (click)="connecter()">Se connecter</button>
+        </div>
+        <div class="text-center">
+            <a [routerLink]="['/inscription']" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Créer un compte</a>
+        </div>
+    </div>
+    </div>
+</div>

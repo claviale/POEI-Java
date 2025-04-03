@@ -1,0 +1,30 @@
+.carre {
+    height: 100px;
+    width: 100px;
+    border: solid 1px;
+    transition: all .3s;
+}
+
+.un{
+    background-color: rgb(0, 255, 255);
+}
+
+.deux {
+    background-color: rgb(255, 234, 0);
+}
+
+.trois {
+    background-color: rgb(255, 128, 0);
+}
+
+.quatre {
+    background-color: rgb(187, 0, 255);
+}
+
+.cinq {
+    background-color: rgb(255, 0, 60);
+}
+
+.pair {
+    border-radius: 50%;
+}

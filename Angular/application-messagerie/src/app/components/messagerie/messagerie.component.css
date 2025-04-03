@@ -1,0 +1,8 @@
+.messagerie app-messages-list{
+    flex: 20 1 auto;
+    height: 60vh;
+}
+
+.messagerie app-form {
+    flex: 1 1 auto;
+}

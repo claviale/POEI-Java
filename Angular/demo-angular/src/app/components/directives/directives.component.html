@@ -1,0 +1,60 @@
+<p>directives works!</p>
+
+<input type="number" [(ngModel)]="valeur">
+<div *ngIf="valeur==5">
+    {{ valeur }} est égal à 5 !
+</div>
+
+<div [ngSwitch]="valeur">
+    <p *ngSwitchCase="0">Zéro !</p>
+    <p *ngSwitchCase="1">Un !</p>
+    <p *ngSwitchCase="2">Deux !</p>
+    <p *ngSwitchCase="3">Trois !</p>
+    <p *ngSwitchCase="4">Quatre !</p>
+    <p *ngSwitchCase="5">Cinq !</p>
+    <p *ngSwitchDefault>Je ne sais pas compter au dela de 5 !</p>
+</div>
+
+<div class="carre" [ngClass]="{
+    'un' : valeur == 1,
+    'deux' : valeur == 2,
+    'trois' : valeur == 3,
+    'quatre' : valeur == 4,
+    'cinq' : valeur == 5,
+    'pair' :   valeur % 2 == 0
+}"></div>
+
+<input type="color" [(ngModel)]="background">
+<input type="number" [(ngModel)]="radius">
+<div class="carre" [ngStyle]="{
+    'background-color' : background,
+    'border-radius' : radius + 'px'
+}"></div>
+
+<ul>
+    <li *ngFor="let fruit of fruits">{{ fruit }}</li>
+</ul>
+<ul>
+    <li *ngFor="let ville of villes">{{ ville.nom }} ({{ ville.code_postal }})</li>
+</ul>
+<ul>
+    <li *ngFor="let ville of villesToString()">
+        {{ ville }}
+    </li>
+</ul>
+
+<select [(ngModel)]="date_format">
+    <option ngValue="dd/MM/yyyy">dd/MM/yyyy</option>
+    <option ngValue="dd-MM-yyyy">dd-MM-yyyy</option>
+    <option ngValue="d MMMM yyyy">d MMMM, yyyy</option>
+</select>
+<div>
+    <p>{{ bonhomme.nom | uppercase }}</p>
+    <p>{{ bonhomme.prenom | titlecase }}</p>
+    <p>{{ bonhomme.date_naissance | date : date_format }}</p>
+    <p>{{ bonhomme.argent_de_poche | currency : '€'}}</p>
+</div>
+
+<input type="text" [(ngModel)]="saisie">
+<p>{{ saisie | kebabCase }}</p>
+

@@ -1,0 +1,19 @@
+<div class="container content d-flex justify-content-center align-items-center">
+    <div class="bg-dark p-5 text-light rounded-3">
+    <h5 class="text-center mb-4">Créer un compte</h5>
+    <form >
+        
+        <div class="mb-2">
+            <label for="username" class="form-label">Nom d'utilisateur</label>
+            <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required>
+        </div>
+        <div class="mb-2">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required>
+        </div>
+        <div class="text-center mt-4">
+            <button class="btn btn-success w-100" (click)="inscrire()">S'inscrire</button>
+        </div>
+    </form>
+    
+</div>

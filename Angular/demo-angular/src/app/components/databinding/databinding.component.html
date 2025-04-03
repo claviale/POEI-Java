@@ -1,0 +1,26 @@
+<p>databinding works!</p>
+
+<!-- Interpolation pour lire la valeur d'un attribut -->
+<p>{{ title }}</p>
+
+<!-- Event binding pour associer une fonction à un event -->
+<button (click)="coucou()">Click me!</button>
+<br>
+
+<!-- Property binding pour affecter la valeur d'un attribut à une propriété html-->
+<textarea [cols]="largeur" [rows]="hauteur"></textarea>
+<br>
+
+<!-- Two ways databinding pour affecter la valeur d'un attribut à un input ET mettre à jour sa valeur quand celle ci est modifiée -->
+<input [(ngModel)]="title">
+<br>
+<input type="password" [(ngModel)]="password">
+<p>{{ message }}</p>
+
+<br>
+<select [(ngModel)]="choix">
+    <option ngValue="rouge">Rouge</option>
+    <option ngValue="bleu">Bleu</option>
+    <option ngValue="vert">Vert</option>
+</select>
+<p>{{ choix }}</p>

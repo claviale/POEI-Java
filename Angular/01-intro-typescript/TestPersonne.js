@@ -1,0 +1,10 @@
+"use strict";
+var _a, _b;
+Object.defineProperty(exports, "__esModule", { value: true });
+var Personne_1 = require("./Personne");
+var capitaine = new Personne_1.Personne("Régist", "Aberbache", new Date(2005, 5, 18), 198);
+var toto = new Personne_1.Personne("Toto", "Tata");
+console.log(capitaine.nom);
+console.log((_a = capitaine.date_naissance) === null || _a === void 0 ? void 0 : _a.getFullYear());
+console.log(toto.nom);
+console.log((_b = toto.date_naissance) === null || _b === void 0 ? void 0 : _b.getFullYear());
