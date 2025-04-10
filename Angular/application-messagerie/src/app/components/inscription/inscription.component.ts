@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { User } from '../../interfaces/user';
 import { UsersService } from '../../services/users.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -11,22 +10,21 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './inscription.component.css'
 })
 export class InscriptionComponent {
-  username = "";
-  password = "";
-
+  username: string = "";
+  password: string = "";
 
   constructor(
     private usersService: UsersService,
     private router: Router
   ) {}
 
+  
   inscrire() {
-    this.usersService.addUser({
+    this.usersService.add_user({
       "username" : this.username,
       "password" : this.password
-    });
-    this.router.navigate(["/accueil"])
-   
+    }).subscribe(response => {
+      this.router.navigate(["/accueil"]);
+    }) ;
   }
-  
 }

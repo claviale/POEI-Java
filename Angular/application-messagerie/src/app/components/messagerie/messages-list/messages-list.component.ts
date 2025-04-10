@@ -15,7 +15,8 @@ export class MessagesListComponent {
   messages : Message[] = [];
 
   constructor(private service : MessagesService) {
-    this.messages = service.getMessages();
+    service.get_messages().subscribe(response => {
+      this.messages = response;
+    });
   }
-
 }

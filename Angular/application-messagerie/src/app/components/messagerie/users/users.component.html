@@ -1,6 +1,5 @@
 <p class="mt-2">{{ title }}</p>
-
-<p *ngIf="users.length == 0">Personne n'est connecté·e</p>
+<p *ngIf="users?.length == 0">Personne n'est connecté·e</p>
 <ul>
-    <li *ngFor="let user of users">{{ user.username }}</li>
+    <li *ngFor="let user of users">{{ user }}</li>
 </ul>

@@ -1,30 +1,27 @@
 import { Injectable } from '@angular/core';
 import { User } from '../interfaces/user';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
-  private users : User[] = [];
+  private BASE_URL = "http://localhost/";
 
-  constructor() { }
+  constructor(private client : HttpClient) { }
 
-  getUsers() {
-    return this.users;
+  get_users() {
+    return this.client.get<string[]>(this.BASE_URL + "users");
   }
 
-  addUser(user : User) {
-    const userExists = this.users.some(existingUser => existingUser.username == user.username);
-    if (!userExists) {
-      this.users.unshift(user);
-    }
+  add_user(user : User) {
+    const headers = new HttpHeaders({'Content-Type' : 'application/json'});
+    return this.client.post<User>(this.BASE_URL + "users", user, {headers});
   }
 
-  checkUser(user : User) {
-    return this.users.some(u =>
-      u.username == user.username
-      && u.password == user.password
-    );
+  check_user(user : User) {
+    const headers = new HttpHeaders({'Content-Type' : 'application/json'});
+    return this.client.post<User>(this.BASE_URL + "check-users", user, {headers})
   }
 
 }

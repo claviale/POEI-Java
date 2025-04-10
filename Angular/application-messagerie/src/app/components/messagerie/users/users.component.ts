@@ -12,10 +12,14 @@ import { UsersService } from '../../../services/users.service';
 
 export class UsersComponent {
   title = "Utilisateur·ice·s"
-  users : User[];
+  users: string[] = [];
+
+
 
   constructor(private service : UsersService) {
-    this.users = service.getUsers();
+    service.get_users().subscribe(result => {
+      this.users = result;
+    });
   }
 
 }
